@@ -1,8 +1,7 @@
 language: ruby
 rvm:
-  - 2.2
+  - 2.7.1
 before_script:
   - gem install awesome_bot
 script:
-  - awesome_bot README.md --white-list transfer.sh
-  - awesome_bot README_ZH-CN.md --white-list transfer.sh
+  - awesome_bot --request-delay 1 --files README.md,README_ZH-CN.md --white-list https://transfer.sh/
